@@ -48,7 +48,12 @@ class Transformer {
 				continue;
 
 			} elseif ( is_numeric( $key ) ) { // No key, merge the full array.
-				$destination = array_merge( $destination, $this->fetch( $source, $branch ) );
+				$value = $this->fetch( $source, $branch );
+				if ( empty( $value ) ) {
+					continue;
+				}
+
+				$destination = array_merge( $destination, $value );
 				continue;
 
 			} elseif ( is_array( $branch ) ) { // Nested array, map branch recursively.
