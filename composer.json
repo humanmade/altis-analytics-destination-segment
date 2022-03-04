@@ -7,9 +7,7 @@
         ],
         "files": [
             "inc/namespace.php",
-            "inc/export/namespace.php",
-            "inc/class-transformer.php",
-            "inc/class-segment-transformer.php"
+            "inc/export/namespace.php"
         ]
     },
    "license": "GPL-2.0-or-later",
