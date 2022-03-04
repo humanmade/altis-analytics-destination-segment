@@ -20,8 +20,6 @@ class SegmentTransformer extends Transformer {
 
 	/**
 	 * Construct a new instance.
-	 *
-	 * @param array $map Map between source and destination formats.
 	 */
 	public function __construct() {
 		// Prepare data mapping array in advance.
@@ -174,7 +172,7 @@ class SegmentTransformer extends Transformer {
 	 * @param array $source Raw Altis Analytics source event.
 	 * @param array $map    Transformation map.
 	 *
-	 * @return array		Returns an array of call arrays if no map is specified, otherwise the single mapped call array.
+	 * @return array        Returns an array of call arrays if no map is specified, otherwise the single mapped call array.
 	 */
 	public function transform( $source, array $map = null ) : array {
 		// If no map is passed, execute the three methods, identify, group, and track for the source event.

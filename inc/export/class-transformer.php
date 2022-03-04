@@ -89,7 +89,7 @@ class Transformer {
 			list( $path, $callback ) = explode( '|', $path );
 		}
 
-		// Allow returning static strings without parsing, eg: 'Value|static'
+		// Allow returning static strings without parsing, eg: 'Value|static'.
 		if ( isset( $callback ) && $callback === 'static' ) {
 			return $path;
 		}
