@@ -9,8 +9,7 @@ namespace Altis\Analytics\Integration\Segment\Export;
 
 use Requests;
 
-const SEGMENT_API_BATCH_URL = '';
-const SEGMENT_API_WRITE_KEY = '';
+const SEGMENT_API_BATCH_URL = 'https://api.segment.io/v1/batch';
 
 /**
  * Bootstrap the functionality.
