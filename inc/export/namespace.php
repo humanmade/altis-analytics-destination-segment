@@ -197,9 +197,9 @@ function log_response( $response ) : void {
  *
  * @example register_segment_group_map( [ 'groupId' => 'endpoint.Attributes.AudienceId' ] );
  * @example register_segment_group_map( [
- * 								'groupId' => 'endpoint.Attributes.AudienceId', [
- * 								'traits' => [ 'country' => 'endpoint.Attributes.Country' ] ]
-* 							] );
+ *                          'groupId' => 'endpoint.Attributes.AudienceId', [
+ *                              'traits' => [ 'country' => 'endpoint.Attributes.Country' ] ]
+ *                          ] );
  *
  * @param array $map Transformer map.
  *
@@ -218,10 +218,11 @@ function register_segment_group_map( array $map ) : void {
  *
  * @example register_segment_group_map( 'endpoint.Attributes.AudienceId' );
  * @example register_segment_group_map( 'endpoint.Attributes.AudienceId', [
- * 										'country' => 'endpoint.Attributes.Country'
-* 									] );
+ *                                        'country' => 'endpoint.Attributes.Country'
+ *                                    ] );
  *
- * @param array $map Transformer map.
+ * @param string $field Map field to use for groupId.
+ * @param array $traits Map tree to associate with the group traits.
  *
  * @return void
  */
