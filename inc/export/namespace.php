@@ -174,19 +174,18 @@ function send( array $batches ) : array {
  */
 function log_response( $response ) : void {
 	if ( is_a( $response, 'Requests_Exception' ) ) {
-		trigger_error( "Error delivering payload to Segment, got exception: $response->getMessage()", E_USER_ERROR );
-
+		trigger_error( "Error delivering payload to Segment, got exception: $response->getMessage()", E_USER_WARNING );
 		do_action( 'altis.analytics.segment.request_failure', $response );
-		return;
+
 	} elseif ( $response->status_code === 200 ) {
 		do_action( 'altis.analytics.segment.request_success', $response );
+
 	} elseif ( $response->status_code === 400 ) {
-		trigger_error( 'Error delivering payload to Segment, request too large / JSON is invalid.', E_USER_ERROR );
-
+		trigger_error( 'Error delivering payload to Segment, request too large / JSON is invalid.', E_USER_WARNING );
 		do_action( 'altis.analytics.segment.request_failure', $response );
-	} else {
-		trigger_error( "Error delivering payload to Segment, got [$response->status_code] [$response->body].", E_USER_ERROR );
 
+	} else {
+		trigger_error( "Error delivering payload to Segment, got [$response->status_code] [$response->body].", E_USER_WARNING );
 		do_action( 'altis.analytics.segment.request_failure', $response );
 	}
 }
