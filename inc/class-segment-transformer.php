@@ -60,7 +60,7 @@ class SegmentTransformer extends Transformer {
 					'source' => 'attributes.qv_utm_source',
 					'medium' => 'attributes.qv_utm_medium',
 					'term' => 'attributes.qv_utm_term',
-					'content' => '',
+					'content' => 'attributes.qv_utm_content',
 				],
 				'device' => [
 					'id' => '',
