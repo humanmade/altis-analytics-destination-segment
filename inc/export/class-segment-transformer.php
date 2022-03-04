@@ -115,29 +115,37 @@ class SegmentTransformer extends Transformer {
 			],
 		];
 
-		if ( $type === 'identify' ) {
-			$type_mapping = array_merge( $mapping, [
-				'traits' => $mapping['context']['traits'],
-				'context' => null,
-			] );
-		} elseif ( $type === 'page' ) {
-			$type_mapping = array_merge( $mapping, [
-				'name' => $mapping['context']['page']['title'],
-				'properties' => $mapping['context']['page'],
-			] );
-		} elseif ( $type === 'track' ) {
-			$type_mapping = array_merge( $mapping, [
-				'event' => 'event_type',
-				'properties' => [
-					'attributes',
-					'metrics',
-				],
-			] );
-		} elseif ( $type === 'group' ) {
-			$type_mapping = array_merge( $mapping, [
-				'context' => null,
-				'messageId' => null,
-			] );
+		switch ( $type ) {
+			case 'identify':
+				$type_mapping = array_merge( $mapping, [
+					'traits' => $mapping['context']['traits'],
+					'context' => null,
+				] );
+				break;
+
+			case 'page':
+				$type_mapping = array_merge( $mapping, [
+					'name' => $mapping['context']['page']['title'],
+					'properties' => $mapping['context']['page'],
+				] );
+				break;
+
+			case 'track':
+				$type_mapping = array_merge( $mapping, [
+					'event' => 'event_type',
+					'properties' => [
+						'attributes',
+						'metrics',
+					],
+				] );
+				break;
+
+			case 'group':
+				$type_mapping = array_merge( $mapping, [
+					'context' => null,
+					'messageId' => null,
+				] );
+				break;
 		}
 
 		/**
