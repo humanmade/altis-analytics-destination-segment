@@ -44,7 +44,6 @@ class SegmentTransformer extends Transformer {
 		$mapping = [
 			'type' => $type . '|static',
 			'anonymousId' => 'endpoint.Id',
-			'messageId' => 'endpoint.RequestId',
 			'timestamp' => 'event_timestamp|' . __CLASS__ . '::format_date',
 			'userId' => 'endpoint.User.UserId',
 
