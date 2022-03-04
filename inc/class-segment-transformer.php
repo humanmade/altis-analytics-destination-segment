@@ -112,7 +112,7 @@ class SegmentTransformer extends Transformer {
 					'sessions' => 'endpoint.Metrics.sessions',
 					'pageViews' => 'endpoint.Metrics.pageViews',
 					'endpoint.Attributes',
-					// TODO: Do we have logged-in user attributes somewhere ?
+					'endpoint.User.Attributes',
 				],
 				'userAgent' => '',
 			],
