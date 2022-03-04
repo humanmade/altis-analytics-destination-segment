@@ -120,7 +120,8 @@ class SegmentTransformer extends Transformer {
 
 		if ( $type === 'identify' ) {
 			$type_mapping = array_merge( $mapping, [
-				'context' => null, // too big for an identify call. ?
+				'traits' => $mapping['context']['traits'],
+				'context' => null,
 			] );
 		} elseif ( $type === 'page' ) {
 			$type_mapping = array_merge( $mapping, [
