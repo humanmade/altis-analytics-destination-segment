@@ -132,7 +132,8 @@ class SegmentTransformer extends Transformer {
 			$type_mapping = array_merge( $mapping, [
 				'event' => 'event_type',
 				'properties' => [
-					'endpoint.Attributes', // TODO: This doesn't seem right, can it be more targetted ?
+					'attributes',
+					'metrics',
 				],
 			] );
 		} elseif ( $type === 'group' ) {
