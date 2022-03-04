@@ -49,9 +49,14 @@ class Transformer {
 
 			} elseif ( is_numeric( $key ) ) { // No key, merge the full array.
 				$value = $this->fetch( $source, $branch );
-				if ( empty( $value ) ) {
+				if ( empty( $value ) || ! is_array( $value ) ) {
 					continue;
 				}
+
+				// Flatten the array.
+				$value = array_map( function( $inner ) {
+					return is_array( $inner ) ? current( $inner ) : $inner;
+				}, $value );
 
 				$destination = array_merge( $destination, $value );
 				continue;
