@@ -24,6 +24,11 @@ function setup() : void {
 	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
 }
 
+/**
+ * Returns the Segment API write key.
+ *
+ * @return string
+ */
 function get_segment_api_write_key() : string {
 	/**
 	 * Filters the Write API key for Segment integration.
