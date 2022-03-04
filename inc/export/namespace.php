@@ -18,18 +18,20 @@ const SEGMENT_API_WRITE_KEY = '';
  * @return void
  */
 function setup() : void {
+	if ( ! get_segment_api_write_key() ) {
+		return;
+	}
+
+	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
+}
+
+function get_segment_api_write_key() : string {
 	/**
 	 * Filters the Write API key for Segment integration.
 	 *
 	 * @param string Segment Write API key.
 	 */
-	$segment_api_write_key = apply_filters( 'altis.analytic.segment.api_write_key', SEGMENT_API_WRITE_KEY );
-
-	if ( ! $segment_api_write_key ) {
-		return;
-	}
-
-	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
+	return apply_filters( 'altis.analytic.segment.api_write_key', SEGMENT_API_WRITE_KEY );
 }
 
 /**
@@ -136,17 +138,6 @@ function prepare( array $data ) : array {
  * @return array         Results of requests, array of Requests_Response or Requests_Exception.
  */
 function send( array $batches ) : array {
-	/**
-	 * Filters the Write API key for Segment integration.
-	 *
-	 * @param string Segment Write API key.
-	 */
-	$segment_api_write_key = apply_filters( 'altis.analytic.segment.api_write_key', SEGMENT_API_WRITE_KEY );
-
-	if ( ! $segment_api_write_key ) {
-		return [];
-	}
-
 	// Prepare the requests.
 	foreach ( $batches as $batch ) {
 		$requests[] = [ 'data' => $batch ];
@@ -162,7 +153,7 @@ function send( array $batches ) : array {
 
 		// Authentication is done using the WRITE key as a username and an empty string as a password.
 		'auth' => [
-			$segment_api_write_key,
+			get_segment_api_write_key(),
 			'',
 		],
 	] );
