@@ -22,6 +22,7 @@ function setup() : void {
 	}
 
 	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
+	add_action( 'altis.analytics.segment.after_send', __NAMESPACE__ . '\log' );
 }
 
 /**
@@ -47,7 +48,6 @@ function get_segment_api_write_key() : string {
  */
 function process( string $data ) : void {
 	// Format events to expected target format.
-	do_action( 'altis.analytics.segment.before_format', $data );
 	$events = format( $data );
 	do_action( 'altis.analytics.segment.after_format', $data );
 
@@ -55,9 +55,7 @@ function process( string $data ) : void {
 	$batches = prepare( $events );
 
 	// Send the data to the destination.
-	do_action( 'altis.analytics.segment.before_send', $events );
 	$results = send( $batches );
-	array_map( __NAMESPACE__ . '\log_response', $results );
 	do_action( 'altis.analytics.segment.after_send', $results, $batches );
 }
 
@@ -168,25 +166,27 @@ function send( array $batches ) : array {
 /**
  * Log request failures.
  *
- * @param Requests_Response|Requests_Exception $response Result of a request.
+ * @param Array<Requests_Response|Requests_Exception> $responses Array of results of requests.
  *
  * @return void
  */
-function log_response( $response ) : void {
-	if ( is_a( $response, 'Requests_Exception' ) ) {
-		trigger_error( "Error delivering payload to Segment, got exception: $response->getMessage()", E_USER_WARNING );
-		do_action( 'altis.analytics.segment.request_failure', $response );
+function log( array $responses, array $batches ) : void {
+	foreach ( $responses as $index => $response ) {
+		if ( is_a( $response, 'Requests_Exception' ) ) {
+			trigger_error( "Error delivering payload to Segment, got exception: $response->getMessage()", E_USER_WARNING );
+			do_action( 'altis.analytics.segment.request_failure', $response, $batches[ $index ] );
 
-	} elseif ( $response->status_code === 200 ) {
-		do_action( 'altis.analytics.segment.request_success', $response );
+		} elseif ( $response->status_code === 200 ) {
+			do_action( 'altis.analytics.segment.request_success', $response, $batches[ $index ] );
 
-	} elseif ( $response->status_code === 400 ) {
-		trigger_error( 'Error delivering payload to Segment, request too large / JSON is invalid.', E_USER_WARNING );
-		do_action( 'altis.analytics.segment.request_failure', $response );
+		} elseif ( $response->status_code === 400 ) {
+			trigger_error( 'Error delivering payload to Segment, request too large / JSON is invalid.', E_USER_WARNING );
+			do_action( 'altis.analytics.segment.request_failure', $response, $batches[ $index ] );
 
-	} else {
-		trigger_error( "Error delivering payload to Segment, got [$response->status_code] [$response->body].", E_USER_WARNING );
-		do_action( 'altis.analytics.segment.request_failure', $response );
+		} else {
+			trigger_error( "Error delivering payload to Segment, got [$response->status_code] [$response->body].", E_USER_WARNING );
+			do_action( 'altis.analytics.segment.request_failure', $response, $batches[ $index ] );
+		}
 	}
 }
 
