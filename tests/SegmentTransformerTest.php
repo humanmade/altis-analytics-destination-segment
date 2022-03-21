@@ -23,6 +23,17 @@ final class SegmentTransformerTest extends TestCase {
 	 */
 	public function testTransform( $event ) : void {
 		$transformer = new SegmentTransformer();
+
+		// Test groups mapping.
+		$transformer->maps['groups'] = [
+			[
+				'groupId' => 'endpoint.Attributes.DeviceType.0',
+				'traits' => [
+					'model' => 'endpoint.Attributes.DeviceModel.0',
+				],
+			],
+		];
+
 		$this->assertMatchesJsonSnapshot( $transformer->transform( $event ) );
 	}
 

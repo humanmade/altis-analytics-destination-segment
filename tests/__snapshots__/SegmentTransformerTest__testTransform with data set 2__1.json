@@ -22,6 +22,16 @@
         }
     },
     {
+        "type": "group",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:06:27+00:00",
+        "receivedAt": "2022-02-01T00:06:28+00:00",
+        "groupId": "mobile",
+        "traits": {
+            "model": "iPhone"
+        }
+    },
+    {
         "type": "page",
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:06:27+00:00",

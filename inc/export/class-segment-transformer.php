@@ -16,7 +16,7 @@ class SegmentTransformer extends Transformer {
 	 *
 	 * @var array
 	 */
-	protected $maps = [];
+	public $maps = [];
 
 	/**
 	 * Construct a new instance.

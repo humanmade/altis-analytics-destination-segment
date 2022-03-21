@@ -14,6 +14,16 @@
         }
     },
     {
+        "type": "group",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:05:11+00:00",
+        "receivedAt": "2022-02-01T00:05:12+00:00",
+        "groupId": "mobile",
+        "traits": {
+            "model": "iPhone"
+        }
+    },
+    {
         "type": "track",
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:05:11+00:00",
