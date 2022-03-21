@@ -1,0 +1,78 @@
+[
+    {
+        "type": "identify",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:06:27+00:00",
+        "receivedAt": "2022-02-01T00:06:28+00:00",
+        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "traits": {
+            "DeviceModel": "iPhone",
+            "initial_utm_medium": "email",
+            "utm_campaign": "XX",
+            "utm_medium": "email",
+            "initial_utm_campaign": "XX",
+            "utm_term": "XX",
+            "DeviceType": "mobile",
+            "initial_utm_source": "XX",
+            "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "DeviceMake": "Apple",
+            "initial_utm_term": "XX",
+            "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "utm_source": "XX"
+        }
+    },
+    {
+        "type": "page",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:06:27+00:00",
+        "receivedAt": "2022-02-01T00:06:28+00:00",
+        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "context": {
+            "active": "ACTIVE",
+            "campaign": {
+                "source": "XX",
+                "medium": "email",
+                "term": "XXOOXX"
+            },
+            "device": {
+                "manufacturer": "Apple",
+                "model": "iPhone",
+                "type": "mobile"
+            },
+            "locale": "en_gb",
+            "location": {
+                "country": "RO"
+            },
+            "os": {
+                "name": "ios",
+                "version": "14.1"
+            },
+            "page": {
+                "search": "search?prop=value",
+                "title": "Some title",
+                "url": "https:\/\/site.com\/XXXX"
+            },
+            "traits": {
+                "DeviceModel": "iPhone",
+                "initial_utm_medium": "email",
+                "utm_campaign": "XX",
+                "utm_medium": "email",
+                "initial_utm_campaign": "XX",
+                "utm_term": "XX",
+                "DeviceType": "mobile",
+                "initial_utm_source": "XX",
+                "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "DeviceMake": "Apple",
+                "initial_utm_term": "XX",
+                "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "utm_source": "XX"
+            }
+        },
+        "name": "Some title",
+        "properties": {
+            "search": "search?prop=value",
+            "title": "Some title",
+            "url": "https:\/\/site.com\/XXXX"
+        }
+    }
+]

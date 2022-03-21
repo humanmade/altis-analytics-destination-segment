@@ -1,0 +1,46 @@
+[
+    {
+        "type": "identify",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:06:50+00:00",
+        "receivedAt": "2022-02-01T00:06:54+00:00",
+        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "traits": {
+            "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+        }
+    },
+    {
+        "type": "page",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:06:50+00:00",
+        "receivedAt": "2022-02-01T00:06:54+00:00",
+        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "context": {
+            "active": "ACTIVE",
+            "locale": "en_us",
+            "location": {
+                "country": "US"
+            },
+            "os": {
+                "name": "windows",
+                "version": "10"
+            },
+            "page": {
+                "search": "",
+                "title": "Some title",
+                "url": "https:\/\/site.com\/XXXX"
+            },
+            "traits": {
+                "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+            }
+        },
+        "name": "Some title",
+        "properties": {
+            "search": "",
+            "title": "Some title",
+            "url": "https:\/\/site.com\/XXXX"
+        }
+    }
+]

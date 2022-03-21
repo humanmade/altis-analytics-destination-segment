@@ -15,9 +15,9 @@ final class NamespaceTest extends TestCase {
 					'type' => 'identify',
 					'anonymousId' => '11954862-0adf-46cf-853f-ac46d8e74bc9',
 					'timestamp' => '2022-02-01T00:05:11+00:00',
+					'receivedAt' => '2022-02-01T00:05:12+00:00',
+					'messageId' => '7e91ec4f-edc1-4a46-ae4b-f7af21b2cdf5',
 					'traits' => [
-						'sessions' => 1.0,
-						'pageViews' => 1.0,
 						'DeviceModel' => 'iPhone',
 						'DeviceType' => 'mobile',
 						'lastPageSession' => '70dcbd86-2062-4b22-b9ed-88d6ee109107',
@@ -29,6 +29,8 @@ final class NamespaceTest extends TestCase {
 					'type' => 'track',
 					'anonymousId' => '11954862-0adf-46cf-853f-ac46d8e74bc9',
 					'timestamp' => '2022-02-01T00:05:11+00:00',
+					'receivedAt' => '2022-02-01T00:05:12+00:00',
+					'messageId' => '7e91ec4f-edc1-4a46-ae4b-f7af21b2cdf5',
 					'context' => [
 						'active' => 'ACTIVE',
 						'device' => [
@@ -50,8 +52,6 @@ final class NamespaceTest extends TestCase {
 							'url' => 'https://site.com/path/to/page/',
 						],
 						'traits' => [
-							'sessions' => 1.0,
-							'pageViews' => 1.0,
 							'DeviceModel' => 'iPhone',
 							'DeviceType' => 'mobile',
 							'lastPageSession' => '70dcbd86-2062-4b22-b9ed-88d6ee109107',
