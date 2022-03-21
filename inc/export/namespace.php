@@ -49,14 +49,13 @@ function get_segment_api_write_key() : string {
 function process( string $data ) : void {
 	// Format events to expected target format.
 	$events = format( $data );
-	do_action( 'altis.analytics.segment.after_format', $data );
 
 	// Prepare data and organize into batches.
 	$batches = prepare( $events );
 
 	// Send the data to the destination.
 	$results = send( $batches );
-	do_action( 'altis.analytics.segment.after_send', $results, $batches );
+	do_action( 'altis.analytics.segment.after_send', $results, $batches, $events );
 }
 
 /**
