@@ -43,7 +43,9 @@ class SegmentTransformer extends Transformer {
 			'type' => $type . '|static',
 			'anonymousId' => 'endpoint.Id',
 			'timestamp' => 'event_timestamp|' . __CLASS__ . '::format_date',
+			'receivedAt' => 'arrival_timestamp|' . __CLASS__ . '::format_date',
 			'userId' => 'endpoint.User.UserId',
+			'messageId' => 'endpoint.RequestId',
 
 			'context' => [
 				'active' => 'endpoint.EndpointStatus',
@@ -106,8 +108,6 @@ class SegmentTransformer extends Transformer {
 				'timezone' => 'endpoint.Demographic.Timezone',
 				'groupId' => '', // Groups are handled separately via `group` calls.
 				'traits' => [
-					'sessions' => 'endpoint.Metrics.sessions',
-					'pageViews' => 'endpoint.Metrics.pageViews',
 					'endpoint.Attributes',
 					'endpoint.User.Attributes',
 				],
