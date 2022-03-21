@@ -1,6 +1,6 @@
 <table width="100%">
 	<tr>
-		<td align="left" width="70">
+		<td align="left" width="70%">
 			<strong>Segment Integration for Altis Analytics</strong><br />
 			Segment integration for Altis Analytics module, exports Altis Analytics events to Segment.
 		</td>
