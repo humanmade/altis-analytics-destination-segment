@@ -61,7 +61,7 @@ Triggered after sending the batch request to Segment APIs.
 
 #### Filters
 
-**`altis.analytic.segment.api_write_key : String`**
+**`altis.analytics.segment.api_write_key : String`**
 
 Filters the Segment API key, for instances where different keys are needed for different sites. Use the constant `SEGMENT_API_WRITE_KEY` otherwise.
 
