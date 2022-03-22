@@ -14,7 +14,7 @@ jobs:
       matrix:
         php: ['7.4']
       fail-fast: false
-    name: WP 5.9 / PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.php }}
     runs-on: ubuntu-18.04
     steps:
     - name: Checkout repository
