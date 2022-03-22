@@ -26,21 +26,11 @@ Segment integration for Altis Analytics adds automatic exporting of analytics ev
 
 ### Installing
 
-```
-composer require humanmade/altis-analytics-integration-segment
-```
-
----
-
-Once you've installed the package, add the following constants to your `wp-config.php`:
-
-```PHP
-define( 'SEGMENT_API_WRITE_KEY', 'ADD_YOUR_SEGMENT_KEY_HERE' );
-```
+The package is automatically bundled with Altis Analytics module, however the Segment API key needs to be defined via the `SEGMENT_API_WRITE_KEY` constant or the `altis.analytic.segment.api_write_key` filter.
 
 ## Usage
 
-Once installed the package sets up a cronjob that handles batch uploading events to Segment APIs through hooking to the event `altis.analytics.export.data.process` that is triggered by Altis Analytics.
+The package sets up a cronjob that handles batch uploading events to Segment APIs through hooking to the event `altis.analytics.export.data.process` that is triggered by Altis Analytics.
 
 #### Functions
 
