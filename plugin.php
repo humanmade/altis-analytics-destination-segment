@@ -19,7 +19,4 @@ if ( file_exists( ROOT_DIR . '/vendor/autoload.php' ) ) {
 	require_once ROOT_DIR . '/vendor/autoload.php';
 }
 
-require_once __DIR__ . '/inc/namespace.php';
-require_once __DIR__ . '/inc/export/namespace.php';
-
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\bootstrap' );
