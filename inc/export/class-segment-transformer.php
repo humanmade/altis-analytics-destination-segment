@@ -45,7 +45,7 @@ class SegmentTransformer extends Transformer {
 			'timestamp' => 'event_timestamp|' . __CLASS__ . '::milliseconds_to_iso8601',
 			'receivedAt' => 'arrival_timestamp|' . __CLASS__ . '::milliseconds_to_iso8601',
 			'userId' => 'endpoint.User.UserId',
-			'messageId' => 'endpoint.RequestId',
+			'messageId' => '|' . __CLASS__ . '::hash_event',
 
 			'context' => [
 				'active' => 'endpoint.EndpointStatus',
@@ -272,6 +272,17 @@ class SegmentTransformer extends Transformer {
 		$timestamp /= 1000;
 
 		return date( 'c', $timestamp );
+	}
+
+	/**
+	 * Hashes an object by converting it to a JSON encoded string then hashing via md5.
+	 *
+	 * @param mixed $source Source value to hash.
+	 *
+	 * @return string
+	 */
+	public static function hash_event( $source ) : string {
+		return hash( 'md5', json_encode( $source ) );
 	}
 
 }

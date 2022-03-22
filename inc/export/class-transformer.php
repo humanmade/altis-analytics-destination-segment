@@ -99,7 +99,7 @@ class Transformer {
 			return $path;
 		}
 
-		$path = explode( '.', $path );
+		$path = $path ? explode( '.', $path ) : [];
 
 		foreach ( $path as $segment ) {
 			if ( ! isset( $value[ $segment ] ) ) {
