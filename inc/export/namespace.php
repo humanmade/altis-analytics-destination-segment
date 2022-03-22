@@ -166,6 +166,7 @@ function send( array $batches ) : array {
  * Log request failures.
  *
  * @param Array<Requests_Response|Requests_Exception> $responses Array of results of requests.
+ * @param Array                                       $batches   Array of batch arrays.
  *
  * @return void
  */
