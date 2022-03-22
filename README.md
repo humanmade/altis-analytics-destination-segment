@@ -89,10 +89,10 @@ $mapping = [
     'key' => 'path.to.value',
 
     // Basic value map:
-    'country' => 'endpoint.Attributes.UserAttributes.country',
+    'country' => 'endpoint.Location.Country',
 
     // Use a transformative callback:
-    'country' => 'endpoint.Attributes.UserAttributes.country|\SOME\NAMESPACE\timestamp_to_string',
+    'country' => 'endpoint.Location.Country|ucfirst',
 
     // Skip a specific key:
     'country' => '',
