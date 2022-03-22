@@ -18,6 +18,9 @@
         "messageId": "89a0b053df75ef85093c2a16b76fc515",
         "context": {
             "active": "ACTIVE",
+            "app": {
+                "version": ""
+            },
             "locale": "en_us",
             "location": {
                 "country": "US"

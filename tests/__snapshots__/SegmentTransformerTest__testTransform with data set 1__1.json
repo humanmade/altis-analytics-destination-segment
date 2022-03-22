@@ -26,6 +26,9 @@
         "messageId": "51c98fcc5afe2e959c5f288a8c9dd1c0",
         "context": {
             "active": "ACTIVE",
+            "app": {
+                "version": ""
+            },
             "campaign": {
                 "source": "XX",
                 "medium": "email"

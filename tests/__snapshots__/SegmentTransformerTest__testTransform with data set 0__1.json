@@ -31,6 +31,9 @@
         "messageId": "1d448a8dac2c4cd1739aea00c958eb8d",
         "context": {
             "active": "ACTIVE",
+            "app": {
+                "version": ""
+            },
             "device": {
                 "manufacturer": "Apple",
                 "model": "iPhone",
