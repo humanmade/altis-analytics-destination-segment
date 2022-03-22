@@ -52,7 +52,7 @@ class SegmentTransformer extends Transformer {
 				'app' => [
 					'name' => '',
 					'build' => '',
-					'version' => 'endpoint.Demographics.AppVersion',
+					'version' => 'endpoint.Demographic.AppVersion',
 				],
 				'campaign' => [
 					'name' => 'attributes.qv_utm_campaign',
