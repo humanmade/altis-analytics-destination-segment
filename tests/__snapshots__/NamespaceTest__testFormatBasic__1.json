@@ -11,7 +11,9 @@
                 "DeviceType": "mobile",
                 "lastPageSession": "70dcbd86-2062-4b22-b9ed-88d6ee109107",
                 "DeviceMake": "Apple",
-                "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195"
+                "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195",
+                "sessions": 1,
+                "pageViews": 1
             }
         },
         {
@@ -48,7 +50,9 @@
                     "DeviceType": "mobile",
                     "lastPageSession": "70dcbd86-2062-4b22-b9ed-88d6ee109107",
                     "DeviceMake": "Apple",
-                    "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195"
+                    "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195",
+                    "sessions": 1,
+                    "pageViews": 1
                 }
             },
             "event": "_session.start",

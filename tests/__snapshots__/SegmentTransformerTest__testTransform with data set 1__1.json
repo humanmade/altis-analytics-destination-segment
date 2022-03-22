@@ -15,7 +15,9 @@
             "initial_utm_campaign": "XX",
             "initial_utm_term": "XX",
             "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
-            "utm_source": "XX"
+            "utm_source": "XX",
+            "sessions": 20,
+            "pageViews": 24
         }
     },
     {
@@ -55,7 +57,9 @@
                 "initial_utm_campaign": "XX",
                 "initial_utm_term": "XX",
                 "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
-                "utm_source": "XX"
+                "utm_source": "XX",
+                "sessions": 20,
+                "pageViews": 24
             }
         },
         "event": "_session.stop",

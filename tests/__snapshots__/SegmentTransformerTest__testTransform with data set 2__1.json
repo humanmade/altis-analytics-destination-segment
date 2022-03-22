@@ -18,7 +18,9 @@
             "DeviceMake": "Apple",
             "initial_utm_term": "XX",
             "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
-            "utm_source": "XX"
+            "utm_source": "XX",
+            "sessions": 22,
+            "pageViews": 26
         }
     },
     {
@@ -78,7 +80,9 @@
                 "DeviceMake": "Apple",
                 "initial_utm_term": "XX",
                 "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
-                "utm_source": "XX"
+                "utm_source": "XX",
+                "sessions": 22,
+                "pageViews": 26
             }
         },
         "name": "Some title",

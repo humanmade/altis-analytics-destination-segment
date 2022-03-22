@@ -10,7 +10,9 @@
             "DeviceType": "mobile",
             "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
             "DeviceMake": "Apple",
-            "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+            "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "sessions": 1,
+            "pageViews": 1
         }
     },
     {
@@ -57,7 +59,9 @@
                 "DeviceType": "mobile",
                 "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
                 "DeviceMake": "Apple",
-                "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+                "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "sessions": 1,
+                "pageViews": 1
             }
         },
         "event": "_session.start",

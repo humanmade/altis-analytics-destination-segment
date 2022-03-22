@@ -7,7 +7,9 @@
         "messageId": "89a0b053df75ef85093c2a16b76fc515",
         "traits": {
             "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
-            "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+            "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "sessions": 1,
+            "pageViews": 1
         }
     },
     {
@@ -36,7 +38,9 @@
             },
             "traits": {
                 "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
-                "lastSession": "XXXXX-XXXX-XXXX-XXXXX"
+                "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "sessions": 1,
+                "pageViews": 1
             }
         },
         "name": "Some title",
