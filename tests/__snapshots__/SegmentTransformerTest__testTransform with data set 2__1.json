@@ -4,7 +4,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:06:27+00:00",
         "receivedAt": "2022-02-01T00:06:28+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "999b578c48f8caf2055809bd58d25213",
         "traits": {
             "DeviceModel": "iPhone",
             "initial_utm_medium": "email",
@@ -36,7 +36,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:06:27+00:00",
         "receivedAt": "2022-02-01T00:06:28+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "999b578c48f8caf2055809bd58d25213",
         "context": {
             "active": "ACTIVE",
             "campaign": {

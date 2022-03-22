@@ -4,7 +4,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:05:11+00:00",
         "receivedAt": "2022-02-01T00:05:12+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "1d448a8dac2c4cd1739aea00c958eb8d",
         "traits": {
             "DeviceModel": "iPhone",
             "DeviceType": "mobile",
@@ -28,7 +28,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:05:11+00:00",
         "receivedAt": "2022-02-01T00:05:12+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "1d448a8dac2c4cd1739aea00c958eb8d",
         "context": {
             "active": "ACTIVE",
             "device": {

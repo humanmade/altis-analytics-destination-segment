@@ -152,6 +152,11 @@ final class TransformerTest extends TestCase {
 				'Something something|static',
 				'Something something',
 			],
+			'Hash whole source object' => [
+				$source,
+				'|json_encode',
+				'{"first_name":"shady","last_name":"sharaf","registered":1646014407}',
+			],
 		];
 	}
 

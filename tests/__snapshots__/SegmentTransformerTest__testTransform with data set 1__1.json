@@ -4,7 +4,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:09:13+00:00",
         "receivedAt": "2022-02-01T00:09:13+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "51c98fcc5afe2e959c5f288a8c9dd1c0",
         "traits": {
             "utm_term": "XX",
             "initial_utm_source": "XX",
@@ -23,7 +23,7 @@
         "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
         "timestamp": "2022-02-01T00:09:13+00:00",
         "receivedAt": "2022-02-01T00:09:13+00:00",
-        "messageId": "XXXXX-XXXX-XXXX-XXXXX",
+        "messageId": "51c98fcc5afe2e959c5f288a8c9dd1c0",
         "context": {
             "active": "ACTIVE",
             "campaign": {
