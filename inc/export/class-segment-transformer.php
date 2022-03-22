@@ -109,7 +109,8 @@ class SegmentTransformer extends Transformer {
 				'groupId' => '', // Groups are handled separately via `group` calls.
 				'traits' => [
 					'endpoint.Attributes',
-					'endpoint.User.Attributes',
+					'endpoint.User.UserAttributes',
+					'endpoint.Metrics',
 				],
 				'userAgent' => '',
 			],
