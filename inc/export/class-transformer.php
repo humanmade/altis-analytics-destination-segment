@@ -108,7 +108,7 @@ class Transformer {
 			$value = $value[ $segment ];
 		}
 
-		if ( isset( $callback ) ) {
+		if ( isset( $callback ) && is_callable( $callback ) ) {
 			$value = $callback( $value );
 		}
 
