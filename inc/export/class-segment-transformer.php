@@ -42,8 +42,8 @@ class SegmentTransformer extends Transformer {
 		$mapping = [
 			'type' => $type . '|static',
 			'anonymousId' => 'endpoint.Id',
-			'timestamp' => 'event_timestamp|' . __CLASS__ . '::format_date',
-			'receivedAt' => 'arrival_timestamp|' . __CLASS__ . '::format_date',
+			'timestamp' => 'event_timestamp|' . __CLASS__ . '::milliseconds_to_iso8601',
+			'receivedAt' => 'arrival_timestamp|' . __CLASS__ . '::milliseconds_to_iso8601',
 			'userId' => 'endpoint.User.UserId',
 			'messageId' => 'endpoint.RequestId',
 
@@ -263,15 +263,13 @@ class SegmentTransformer extends Transformer {
 	/**
 	 * Convert a numerical timestamp into an ISO 8601 date string.
 	 *
-	 * @param integer $timestamp Numerical timestamp, in seconds or milliseconds.
+	 * @param integer $timestamp Numerical timestamp, in milliseconds.
 	 *
 	 * @return string ISO 8601 date string.
 	 */
-	public static function format_date( int $timestamp ) : string {
-		// If in milliseconds, convert to seconds.
-		if ( strlen( $timestamp ) > 10 ) {
-			$timestamp /= 1000;
-		}
+	public static function milliseconds_to_iso8601( int $timestamp ) : string {
+		// Convert to from milliseconds.
+		$timestamp /= 1000;
 
 		return date( 'c', $timestamp );
 	}
