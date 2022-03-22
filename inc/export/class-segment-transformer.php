@@ -10,7 +10,7 @@ namespace Altis\Analytics\Integration\Segment\Export;
 /**
  * Map-based data transformation.
  */
-class SegmentTransformer extends Transformer {
+class Segment_Transformer extends Transformer {
 	/**
 	 * Maps between source and destination formats.
 	 *

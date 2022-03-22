@@ -72,7 +72,7 @@ function format( string $data ) {
 	}, explode( "\n", $data ) );
 
 	// Preload the transformer.
-	$transformer = new SegmentTransformer;
+	$transformer = new Segment_Transformer;
 
 	// Format the data to the expected format by the destination API.
 	$formatted = array_map( [ $transformer, 'transform' ], array_values( array_filter( $events ) ) );

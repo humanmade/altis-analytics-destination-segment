@@ -12,7 +12,7 @@ namespace Altis\Analytics\Integration\Segment\Export;
 use PHPUnit\Framework\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
 
-final class SegmentTransformerTest extends TestCase {
+final class Segment_TransformerTest extends TestCase {
 
 	use MatchesSnapshots;
 
@@ -22,7 +22,7 @@ final class SegmentTransformerTest extends TestCase {
 	 * @return void
 	 */
 	public function testTransform( $event ) : void {
-		$transformer = new SegmentTransformer();
+		$transformer = new Segment_Transformer();
 
 		// Test groups mapping.
 		$transformer->maps['groups'] = [
