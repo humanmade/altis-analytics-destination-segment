@@ -1,0 +1,97 @@
+[
+    {
+        "type": "identify",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:05:11+00:00",
+        "receivedAt": "2022-02-01T00:05:12+00:00",
+        "messageId": "1d448a8dac2c4cd1739aea00c958eb8d",
+        "traits": {
+            "DeviceModel": "iPhone",
+            "DeviceType": "mobile",
+            "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "DeviceMake": "Apple",
+            "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "sessions": 1,
+            "pageViews": 1
+        }
+    },
+    {
+        "type": "group",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:05:11+00:00",
+        "receivedAt": "2022-02-01T00:05:12+00:00",
+        "groupId": "mobile",
+        "traits": {
+            "model": "iPhone"
+        }
+    },
+    {
+        "type": "track",
+        "anonymousId": "XXXXX-XXXX-XXXX-XXXXX",
+        "timestamp": "2022-02-01T00:05:11+00:00",
+        "receivedAt": "2022-02-01T00:05:12+00:00",
+        "messageId": "1d448a8dac2c4cd1739aea00c958eb8d",
+        "context": {
+            "active": "ACTIVE",
+            "app": {
+                "version": ""
+            },
+            "device": {
+                "manufacturer": "Apple",
+                "model": "iPhone",
+                "type": "mobile"
+            },
+            "locale": "en_gb",
+            "location": {
+                "country": "GB"
+            },
+            "os": {
+                "name": "ios",
+                "version": "14.4.1"
+            },
+            "page": {
+                "search": "",
+                "title": "Some title",
+                "url": "https:\/\/site.com\/XXXX"
+            },
+            "traits": {
+                "DeviceModel": "iPhone",
+                "DeviceType": "mobile",
+                "lastPageSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "DeviceMake": "Apple",
+                "lastSession": "XXXXX-XXXX-XXXX-XXXXX",
+                "sessions": 1,
+                "pageViews": 1
+            }
+        },
+        "event": "_session.start",
+        "properties": {
+            "date": "2021-10-12T08:33:00+01:00",
+            "referer": "XX",
+            "session": "XXXXX-XXXX-XXXX-XXXXX",
+            "blog": "https:\/\/site.com",
+            "title": "Some title",
+            "pageSession": "XXXXX-XXXX-XXXX-XXXXX",
+            "network": "https:\/\/site.com\/",
+            "search": "",
+            "host": "site.com",
+            "networkId": "1",
+            "postType": "deal",
+            "author": "Some author",
+            "postId": "XX",
+            "authorId": "XX",
+            "url": "https:\/\/site.com\/XXXX",
+            "loggedIn": "false",
+            "blogId": "1",
+            "hash": "",
+            "sector_17": "office",
+            "elapsed": 2,
+            "scrollDepthNow": 0,
+            "hour": 0,
+            "month": 2,
+            "year": 2022,
+            "scrollDepthMax": 0,
+            "day": 3
+        }
+    }
+]

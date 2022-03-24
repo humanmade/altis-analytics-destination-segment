@@ -1,0 +1,35 @@
+# Default Travis CI config for Altis
+os: linux
+dist: bionic
+
+# Ensure PHP CLI and Composer are available
+language: php
+php:
+  - '7.4'
+
+# Configure local-server to ensure startup will complete in Travis CI
+env:
+  global:
+    - COMPOSE_HTTP_TIMEOUT=360
+    - ES_MEM_LIMIT=2g
+
+# Default notification settings
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+# Cache composer dependencies by default
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+# Install application and start the local server
+before_script:
+  - composer install
+
+# Custom travis configuration.
+# Settings here are merged with and appended to the base configuration.
+script:
+  # Run unit tests.
+  - composer test

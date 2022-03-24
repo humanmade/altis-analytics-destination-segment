@@ -1,0 +1,55 @@
+name: Unit Tests
+on:
+  push:
+    branches:
+      - 'develop'
+      - 'main'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        php: ['7.4', '8.0', '8.1']
+      fail-fast: false
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+
+    - name: Install PHP
+      uses: shivammathur/setup-php@2.7.0
+      with:
+        php-version: ${{ matrix.php }}
+        extensions: mysqli, xmlwriter
+        coverage: none
+        tools: composer:v2
+
+    - name: Debugging
+      run: |
+        php --version
+        php -m
+        composer --version
+        mysql --version
+
+    - name: Get Composer Cache Directory
+      id: composer-cache-dir
+      run: |
+        echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+    - name: Cache PHP Dependencies
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.composer-cache-dir.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ hashFiles('composer.lock') }}-wp5.9
+
+    - name: Install PHP Dependencies
+      run: |
+        composer install --prefer-dist --no-progress --no-suggest --no-interaction
+
+    - name: Run the tests
+      run: composer test

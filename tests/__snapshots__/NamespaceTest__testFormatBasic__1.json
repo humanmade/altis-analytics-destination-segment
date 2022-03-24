@@ -1,0 +1,87 @@
+[
+    [
+        {
+            "type": "identify",
+            "anonymousId": "11954862-0adf-46cf-853f-ac46d8e74bc9",
+            "timestamp": "2022-02-01T00:05:11+00:00",
+            "receivedAt": "2022-02-01T00:05:12+00:00",
+            "messageId": "5a40f8d9a6b08dbf07e80defe39b70ca",
+            "traits": {
+                "DeviceModel": "iPhone",
+                "DeviceType": "mobile",
+                "lastPageSession": "70dcbd86-2062-4b22-b9ed-88d6ee109107",
+                "DeviceMake": "Apple",
+                "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195",
+                "sessions": 1,
+                "pageViews": 1
+            }
+        },
+        {
+            "type": "track",
+            "anonymousId": "11954862-0adf-46cf-853f-ac46d8e74bc9",
+            "timestamp": "2022-02-01T00:05:11+00:00",
+            "receivedAt": "2022-02-01T00:05:12+00:00",
+            "messageId": "5a40f8d9a6b08dbf07e80defe39b70ca",
+            "context": {
+                "active": "ACTIVE",
+                "app": {
+                    "version": ""
+                },
+                "device": {
+                    "manufacturer": "Apple",
+                    "model": "iPhone",
+                    "type": "mobile"
+                },
+                "locale": "en_gb",
+                "location": {
+                    "country": "GB"
+                },
+                "os": {
+                    "name": "ios",
+                    "version": "14.4.1"
+                },
+                "page": {
+                    "search": "",
+                    "title": "Page title",
+                    "url": "https:\/\/site.com\/path\/to\/page\/"
+                },
+                "traits": {
+                    "DeviceModel": "iPhone",
+                    "DeviceType": "mobile",
+                    "lastPageSession": "70dcbd86-2062-4b22-b9ed-88d6ee109107",
+                    "DeviceMake": "Apple",
+                    "lastSession": "2f016215-6e0c-453b-a88a-a74e97d71195",
+                    "sessions": 1,
+                    "pageViews": 1
+                }
+            },
+            "event": "_session.start",
+            "properties": {
+                "date": "2021-10-12T08:33:00+01:00",
+                "referer": "https:\/\/www.google.co.uk",
+                "session": "2f016215-6e0c-453b-a88a-a74e97d71195",
+                "blog": "https:\/\/site.com",
+                "title": "Page title",
+                "pageSession": "70dcbd86-2062-4b22-b9ed-88d6ee109107",
+                "network": "https:\/\/site.com\/",
+                "search": "",
+                "host": "site.com",
+                "networkId": "1",
+                "author": "someauthor",
+                "postId": "118715",
+                "authorId": "92",
+                "url": "https:\/\/site.com\/path\/to\/page\/",
+                "loggedIn": "false",
+                "blogId": "1",
+                "hash": "",
+                "elapsed": 2,
+                "scrollDepthNow": 0,
+                "hour": 0,
+                "month": 2,
+                "year": 2022,
+                "scrollDepthMax": 0,
+                "day": 3
+            }
+        }
+    ]
+]
