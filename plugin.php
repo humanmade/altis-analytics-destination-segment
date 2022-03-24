@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Altis Analytics Integration for Segment
  * Description: Integration for Altis Analtysics and Segment service.
- * Version: 1.0
+ * Version: 0.1.0
  * Author: Human Made Limited
  * Author URI: https://humanmade.com/
  *
