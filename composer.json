@@ -1,6 +1,6 @@
 {
-    "name": "altis/altis-analytics-integration-segment",
-    "description": "Altis Analytics integration with Segment",
+    "name": "altis/analytics-integration-segment",
+    "description": "Segment integration for Altis Analytics module",
     "type": "wordpress-plugin",
     "autoload": {
         "classmap": [
