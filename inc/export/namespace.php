@@ -22,7 +22,7 @@ function setup() : void {
 	}
 
 	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
-	add_action( 'altis.analytics.segment.after_send', __NAMESPACE__ . '\log' );
+	add_action( 'altis.analytics.segment.after_send', __NAMESPACE__ . '\log', 10, 2 );
 }
 
 /**
@@ -141,23 +141,20 @@ function prepare( array $data ) : array {
 function send( array $batches ) : array {
 	// Prepare the requests.
 	foreach ( $batches as $batch ) {
-		$requests[] = [ 'data' => $batch ];
+		$requests[] = [
+			'type' => 'POST',
+			'url' => SEGMENT_API_BATCH_URL,
+			'headers' => [
+				'content-type' => 'application/json',
+				// Authentication is done using the WRITE key as a username and an empty string as a password.
+				'Authorization' => 'Basic ' . base64_encode( get_segment_api_write_key() . ':' ),
+			],
+			'data' => $batch,
+		];
 	}
 
 	// Fire all requests in parallel!
-	$results = Requests::request_multiple( $requests, [
-		'type' => 'POST',
-		'url' => SEGMENT_API_BATCH_URL,
-		'headers' => [
-			'content-type' => 'application/json',
-		],
-
-		// Authentication is done using the WRITE key as a username and an empty string as a password.
-		'auth' => [
-			get_segment_api_write_key(),
-			'',
-		],
-	] );
+	$results = Requests::request_multiple( $requests );
 
 	return $results;
 }
