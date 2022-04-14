@@ -22,7 +22,7 @@ function setup() : void {
 	}
 
 	add_action( 'altis.analytics.export.data.process', __NAMESPACE__ . '\process' );
-	add_action( 'altis.analytics.segment.after_send', __NAMESPACE__ . '\log' );
+	add_action( 'altis.analytics.segment.after_send', __NAMESPACE__ . '\log', 10, 2 );
 }
 
 /**
